@@ -2,10 +2,12 @@
 <!-- slug: chaldea-ai -->
 <!-- title: FateMatch AI - Servant Compatibility Analyzer -->
 <!-- description: Application thats show place using AI recommend + Google Maps -->
-<!-- image:  -->
+<!-- image: https://github.com/user-attachments/assets/55a0f444-83a9-4c01-b6b4-4652152266b1 -->
 <!-- tags: python, flask, react, ai -->
 
 # 🔮 FateMatch AI — Servant Compatibility Analyzer
+
+![WhatsApp Image 2025-11-02 at 9 55 58 PM](https://github.com/user-attachments/assets/55a0f444-83a9-4c01-b6b4-4652152266b1)
 
 An **AI-powered personality matching** application that determines which *Fate/Grand Order* Servant best fits the user's personality.  
 Built using **React (Frontend)** and **Flask (Backend)** — with a bit of extra **AI roasting spice** 😎
