@@ -1,71 +1,78 @@
+<!-- portfolio -->
+<!-- slug: chaldea-ai -->
+<!-- title: FateMatch AI - Servant Compatibility Analyzer -->
+<!-- description: Application thats show place using AI recommend + Google Maps -->
+<!-- image:  -->
+<!-- tags: python, flask, react, ai -->
+
 # 🔮 FateMatch AI — Servant Compatibility Analyzer
 
-Aplikasi berbasis **AI personality matching** yang menentukan *Servant Fate/Grand Order* mana yang paling cocok dengan kepribadian pengguna.  
-Dibangun menggunakan **React (Frontend)** dan **Flask (Backend)** dengan sedikit bumbu **roasting dari AI** 😎
+An **AI-powered personality matching** application that determines which *Fate/Grand Order* Servant best fits the user's personality.  
+Built using **React (Frontend)** and **Flask (Backend)** — with a bit of extra **AI roasting spice** 😎
 
 ---
 
-## 👨‍💻 Identitas Pembuat
+## 👨‍💻 Creator Identity
 
-| Username Master |
-|------|
+| Master Username |
+|----------------|
 | Fanthom |
 
 ---
 
-## 🧠 Deskripsi Singkat
+## 🧠 Overview
 
-**FateMatch AI** merupakan sistem pakar sederhana yang menganalisis kepribadian pengguna untuk menentukan *Servant* yang paling cocok dari semesta **Fate/Grand Order**.  
-Selain memberikan hasil analisis kecocokan, sistem juga menyertakan **alasan logis** dan **roasting kocak** dari AI untuk memberikan pengalaman yang lebih interaktif.
+**FateMatch AI** is a simple expert system that analyzes a user’s personality and matches it with the most compatible Servant from the **Fate/Grand Order** universe.  
+In addition to compatibility analysis, the system also generates **logical explanations** and **funny roast lines** from the AI to make the user experience more engaging.
 
-Pengguna hanya perlu memasukkan:
-1. **Nama / julukan Master**
-2. **Deskripsi kepribadian singkat**
-3. (Opsional) **Menilai apakah hasil cocok atau tidak**
+Users only need to provide:
+1. **Master name / nickname**  
+2. **A short personality description**  
+3. (Optional) **Feedback on whether the result is accurate**
 
 ---
 
-## ⚙️ Teknologi yang Digunakan
+## ⚙️ Technologies Used
 
 ### Backend
 - Python 3.x  
 - Flask  
 - Flask-CORS  
-- OpenAI API (untuk reasoning dan roasting)
+- OpenAI API (for reasoning + roasting)
 
 ### Frontend
 - React + Vite  
 - Tailwind CSS  
 - Axios  
-- Framer Motion (untuk animasi UI)
+- Framer Motion (UI animations)
 
 ---
 
-## 🚀 Cara Menjalankan Project
+## 🚀 How to Run the Project
 
-### 1️⃣ Jalankan Backend (Flask)
+### 1️⃣ Run the Backend (Flask)
 ```php
 cd backend
 pip install flask flask-cors openai
 python app.py
 ```
-Secara default, backend akan berjalan di:
+Backend will run at:
 ```bash
 http://localhost:5000
 ```
 
-### 2️⃣ Jalankan Frontend (React)
+### 2️⃣ Run the Frontend (React)
 ```php
 cd frontend
 npm install
 npm run dev
 ```
 
-Frontend akan berjalan di:
+Frontend will run at:
 ```bash
 http://localhost:5173
 ```
-### 🧩 Struktur Project
+### 🧩 Project Structure
 ```bash
 FateMatch-AI/
 ├── backend/
@@ -84,19 +91,20 @@ FateMatch-AI/
 └── README.md
 ```
 
-### 🧠 Alur Kerja Sistem
+### 🧠 System Workflow
 
-1. Pengguna memasukkan nama Master dan deskripsi kepribadian.
-2. Sistem melakukan reasoning menggunakan model AI untuk menentukan Servant yang paling cocok.
-3. AI menghasilkan alasan kecocokan dan roasting lucu.
-4. Hasil ditampilkan dalam bentuk kartu hasil (ResultCard) dengan opsi:
-  - 👍 Cocok
-  - 👎 Tidak cocok
+1. The user provides their Master name and personality description.
+2. The system uses AI reasoning to determine the most compatible Servant.
+3. AI generates a compatibility explanation + a humorous roast.
+4. The result is displayed in a Result Card with options:
+  - 👍 Match
+  - 👎 Not a match
 
 ## 🧾 API Endpoints
 
 ### 1️⃣ POST /analyze_match
-Menganalisis kepribadian pengguna dan menentukan Servant yang cocok.
+
+Analyze the user’s personality and determine the matching Servant.
 
 Request Body
 ```php
@@ -122,7 +130,8 @@ Response
 ```
 
 ### 2️⃣ POST /feedback_match
-Menyimpan penilaian pengguna apakah hasilnya sesuai atau tidak.
+
+Save user feedback about whether the match result is accurate.
 
 Request Body
 ```php
@@ -141,29 +150,34 @@ Response
 }
 ```
 
-## 🧩 Fitur Tambahan
+## 🧩 Additional Features
 
 ### 💬 Feedback System
-- Pengguna dapat memberi feedback apakah hasilnya cocok atau tidak.
-- Data disimpan untuk learning improvement pada iterasi selanjutnya.
 
-### 🔗 Tombol Share
-- Hasil analisis dapat dibagikan langsung ke media sosial (Twitter, WhatsApp, dsb).
-- Menggunakan Web Share API untuk kemudahan berbagi.
+- Users can vote whether the match result is accurate or not.
+- Feedback is stored for future iteration improvements.
 
-### ⏳ Animasi Loading
-- Saat AI sedang melakukan analisis, tampilan berubah menjadi animasi loading di tengah layar.
+### 🔗 Share Button
+
+- Results can be shared directly to social media (Twitter, WhatsApp, etc.)
+- Implemented using Web Share API for convenience.
+
+### ⏳ Loading Animation
+
+- While AI processes the analysis, a full-screen loading animation is shown.
 
 ### 🎴 Centered Result Display
-- Setelah hasil keluar, hanya kartu hasil yang ditampilkan di tengah layar agar fokus dan estetik.
 
-### 🧬 Mekanisme “AI Matching Logic”
-1. Deskripsi pengguna diproses oleh model AI untuk mendeteksi kata kunci kepribadian.
-2. AI membandingkan kata kunci ini dengan database sifat Servant FGO.
-3. Hasil terbaik dipilih berdasarkan kesamaan sifat dan disertai alasan (reason + roast).
-4. Feedback pengguna digunakan untuk memperkuat pola kecocokan di masa depan.
+- Final results appear in a centered card for a clean and aesthetic presentation.
 
-### 📁 Contoh File Feedback (feedback_data.json)
+### 🧬 AI Matching Logic
+
+1. User personality text is processed with an AI model to detect key personality traits.
+2. These traits are mapped against the FGO Servant personality database.
+3. The closest compatibility match is selected, along with reasoning and a roast.
+4. User feedback helps refine future matching accuracy.
+
+### 📁 Example Feedback File (feedback_data.json)
 ```bash
 [
   {
